@@ -2,14 +2,14 @@
 
 ## Build Image
 ```
-docker build -t keepwn/ngrok-self-hosting .
+docker build -t lizhi/ngrok-self-hosting .
 ```
 
 ## Generate Ngrok-Self
 ```
 cd ~
 mkdir ngrok-bin
-docker run --rm -e DOMAIN="tunnel.mydomain.com" -v $(pwd)/ngrok-bin:/release keepwn/ngrok-self-hosting
+docker run --rm -e DOMAIN="tunnel.mydomain.com" -v $(pwd)/ngrok-bin:/release lizhi/ngrok-self-hosting
 ```
 Ngrok server and client binaries will be available in `$(pwd)/ngrok-bin` on the host.
 
