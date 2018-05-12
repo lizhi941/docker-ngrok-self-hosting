@@ -1,9 +1,9 @@
-FROM alpine
-MAINTAINER keepwn <keepwn@gmail.com>
+FROM centos:7
+MAINTAINER lizhi <hello-168@163.com>
 
-RUN apk update && \
-    apk add git make go openssl && \
-    rm -rf /var/cache/apk/*
+RUN yum update -y && \
+    yum -y install git make go openssl gcc && \
+    rm -rf /var/cache/yum/*
 
 ADD build.sh /
 RUN chmod +x /build.sh
